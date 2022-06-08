@@ -1,0 +1,72 @@
+@use "../presets" as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  &__circle {
+    fill: $color-yellow;
+    stroke: $color-green;
+    stroke-width: 5;
+  }
+  &__square {
+    fill: $color-red;
+    stroke: $color-black;
+    stroke-width: 5;
+  }
+  &__rectangle {
+    fill: $color-indigo;
+    stroke: $color-pink;
+    stroke-width: 5;
+  }
+  &__ellipse {
+    fill: $color-orange;
+    stroke: $color-magenta;
+    stroke-width: 5;
+  }
+}
+.animation {
+  border-top: 1px solid $color-black;
+  &__circle1 {
+    animation-name: cirlce1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    stroke-width: 5;
+    @keyframes cirlce1 {
+      from {
+        cy: 0;
+        fill: $color-white;
+        stroke: $color-gray;
+      }
+      to {
+        cy: 50%;
+        fill: $color-yellow;
+        stroke: $color-blue;
+      }
+    }
+  }
+  &__circle2 {
+    animation-name: cirlce2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    stroke-width: 5;
+    @keyframes cirlce2 {
+      from {
+        cx: 100%;
+        fill: $color-white;
+        stroke: $color-gray;
+      }
+      to {
+        opacity: 0.5;
+
+        cx: 50%;
+        fill: $color-blue;
+        stroke: $color-yellow;
+      }
+    }
+  }
+}
